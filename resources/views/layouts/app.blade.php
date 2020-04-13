@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
+
     <div class="wrapper">
         
         @include('includes.navbar')
@@ -56,22 +57,7 @@
             <div class="container-fluid">
                 <div class="row">
                     @yield('content')
-                <!--
-                <div class="col-lg-12">
 
-                    <div class="card card-primary card-outline">
-                    <div class="card-header">
-                        <h5 class="m-0">Featured</h5>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-title">Special title treatment</h6>
-
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    </div>
-                </div>
-                -->
                 </div>
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -80,6 +66,7 @@
         </div>
   <!-- /.content-wrapper -->
     </div>
+
     <!-- jQuery -->
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
