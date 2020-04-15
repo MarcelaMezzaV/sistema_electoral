@@ -24,9 +24,9 @@
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
                             <td>
-                                <button class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></button>
+                                <a class="btn btn-primary btn-sm" href="{{url('/users/'.$user->id)}}"><i class="fas fa-eye"></i></a>
                                 <a class="btn btn-success btn-sm" href="{{url('/users/'.$user->id.'/edit')}}"><i class="fas fa-user-edit"></i></a>
-                                <button class="btn btn-danger btn-sm"><i class="fas fa-user-minus"></i></button>
+                                <a class="btn btn-danger btn-sm" href="{{url('/users/'.$user->id)}}"><i class="fas fa-user-minus"></i></a>
                             </td>
                         </tr>
                         @endforeach

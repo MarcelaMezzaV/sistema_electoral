@@ -42,9 +42,9 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{url('register')}}" class="nav-link active">
+                    <a href="{{url('/users')}}" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Nuevo Usuario</p>
+                    <p>Administrar Usuarios</p>
                   </a>
                 </li>
                 <li class="nav-item">
