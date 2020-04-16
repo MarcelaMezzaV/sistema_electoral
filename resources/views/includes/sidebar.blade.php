@@ -29,6 +29,9 @@
   
         <!-- Sidebar Menu -->
         <nav class="mt-2">
+          @if (Auth::user()->hasAnyRole(['admin']))
+              
+          
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
@@ -65,6 +68,7 @@
               </a>
             </li>
           </ul>
+          @endif
         </nav>
         <!-- /.sidebar-menu -->
       </div>

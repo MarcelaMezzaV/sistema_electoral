@@ -9,7 +9,8 @@ use Intervention\Image\ImageManagerStatic as Image;
 use File;
 class UserController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+        $request->user()->authorizeRole(['admin']);//comprovando si tiene el rol de admin
         $users = User::all();
         return view('users.index', ['users'=>$users]);
         //return $users; 
@@ -18,11 +19,12 @@ class UserController extends Controller
         return View('users.perfil', compact('user'));
     }
     public function edit(User $user){
+        $this->authorize('updateAuthorize', $user);
         return view('users.edit', compact('user'));
     }
     public function update(Request $request, User $user){
         //dd(Hash::make($request['old_password']));
-        //$this->authorize('update', $user);
+        $this->authorize('updateAuthorize', $user);
         if(Hash::check($request['old_password'], $user->password)){
 
             $validateData = $request->validate([

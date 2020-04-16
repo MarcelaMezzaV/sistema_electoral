@@ -26,3 +26,17 @@ Route::get('/users/{user}', 'UserController@show');
 
 Route::get('/users/{user}/edit', 'UserController@edit');
 Route::put('/users/{user}/edit', 'UserController@update');
+
+
+
+Route::get('/prueba', function () {
+    $user = App\user::findOrFail(1);
+    //$roles = $user->roles;//roles es la funcion que creamos en el modelo como relacion
+    //return $roles[1]->roleName;
+    //para ver que usuarios tienen el rol admin
+    //$roles = App\role::findOrFail(1);
+    //return $roles->users;
+    //probando otra cosa
+    $ver = $user->roles()->where('roleName', 'admin')->first();
+    return $ver;
+});
